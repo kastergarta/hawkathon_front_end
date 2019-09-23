@@ -1,20 +1,45 @@
 import React from 'react';
 import './App.css';
-import MailForm from './components/mailform.js';
 
-import SignUp from './components/signup.js';
-import Profile from './components/profile.js';
 import ButtonAppBar from './components/navbar.js';
+import NavTabs from './components/tabs.js';
+import Sponsors from './components/sponsors.js';
+import Judges from './components/judges.js';
+import JudgesCard from './components/judgescard.js';
+import SimpleExpansionPanel from './components/expansionpanels.js';
+
+
+
+
 
 
 class App extends React.Component {
+
+state = {
+  userStatus: 'newUser'
+}
+
+handleStateChange = () => {
+  this.setState ({
+    userStatus: 'logedInUser'
+  })
+}
+
+handleLogOutChange = () => {
+  this.setState ({
+    userStatus: 'newUser'
+  })
+}
+
   render() {
     return (
       <div>
-          < ButtonAppBar />
-          < MailForm/>
-          < SignUp />
-          < Profile />
+          <ButtonAppBar position="sticky" userStatus={this.state.userStatus} handleStateChange={this.handleStateChange} handleLogOutChange={this.handleLogOutChange}/>
+          <NavTabs />
+          <Sponsors />
+          <Judges />
+          <JudgesCard />
+          <SimpleExpansionPanel />
       </div>
     );
   };

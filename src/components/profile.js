@@ -102,7 +102,7 @@ class Profile extends Component {
     });
 
     switch (this.state.name) {
-           case ("Dennis"):
+           case ("kis"):
              return (
             <div>
                <div className="App">

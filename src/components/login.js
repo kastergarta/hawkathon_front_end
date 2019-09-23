@@ -27,7 +27,8 @@ class LogIn extends React.Component {
       console.log(data)
       if (data.jwt) {
         localStorage.jwt = data.jwt
-        console.log("Done!")
+        console.log(this.props)
+        this.props.handleStateChange();
       }
     })
 

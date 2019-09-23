@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -13,6 +13,8 @@ import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 
 import LogIn from './login.js';
+import SignUp from './signup.js';
+import Profile from './profile.js';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -35,62 +37,153 @@ const useStyles = makeStyles(theme => ({
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
   },
+
+  paper: {
+    backgroundColor: theme.palette.background.paper,
+    border: '2px solid #000',
+    boxShadow: theme.shadows[5],
+    padding: theme.spacing(2, 4, 3),
+  },
 }));
 
-export default function ButtonAppBar() {
+export default function ButtonAppBar(props) {
+
   const classes = useStyles();
-  const [open, setOpen] = React.useState(false);
+  const [openLogin, setOpenLogin] = React.useState(false);
+  const [openRegister, setOpenRegister] = React.useState(false);
+  const [openProfile, setOpenProfile] = React.useState(false);
 
   const handleLoginOpen = () => {
-    setOpen(true);
+    setOpenLogin(true);
   };
 
   const handleLoginClose = () => {
-    setOpen(false);
+    setOpenLogin(false);
   };
 
   const handleRegisterOpen = () => {
-    setOpen(true);
+    setOpenRegister(true);
   };
 
   const handleRegisterClose = () => {
-    setOpen(false);
+    setOpenRegister(false);
   };
 
-  return (
-    <div className={classes.root}>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" className={classes.title}>
-            News
-          </Typography>
-          <Button color="inherit" onClick={handleLoginOpen}>Login</Button>
-          <Button color="inherit" onClick={handleRegisterOpen}>Register</Button>
+  const handleLogOut = () => {
+    localStorage.clear();
+    props.handleLogOutChange();
+  };
 
-          <Modal
-            aria-labelledby="transition-modal-title"
-            aria-describedby="transition-modal-description"
-            className={classes.modal}
-            open={open}
-            onClose={handleLoginClose}
-            closeAfterTransition
-            BackdropComponent={Backdrop}
-            BackdropProps={{
-              timeout: 500,
-            }}
-          >
-            <Fade in={open}>
+  const handleProfileOpen = () => {
+    setOpenProfile(true);
+  };
+
+  const handleProfileClose = () => {
+    setOpenProfile(false);
+  };
+
+  switch (props.userStatus) {
+    case 'newUser':
+    return (
+      <div className={classes.root}>
+        <AppBar position="fixed">
+          <Toolbar>
+            <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+              <MenuIcon />
+            </IconButton>
+
+            <Typography variant="h6" className={classes.title}>
+              News
+            </Typography>
+
+            <Button color="inherit" onClick={handleLoginOpen}>Login</Button>
+            <Button color="inherit" onClick={handleRegisterOpen}>Register</Button>
+
+            <Modal
+              aria-labelledby="transition-modal-title"
+              aria-describedby="transition-modal-description"
+              className={classes.modal}
+              open={openLogin}
+              onClose={handleLoginClose}
+              closeAfterTransition
+              BackdropComponent={Backdrop}
+              BackdropProps={{
+                timeout: 500,
+              }}
+            >
+
+            <Fade in={openLogin}>
               <div className={classes.paper}>
-               <LogIn />
+               <LogIn handleStateChange={props.handleStateChange}/>
               </div>
             </Fade>
           </Modal>
 
-        </Toolbar>
-      </AppBar>
-    </div>
-  );
+            <Modal
+              aria-labelledby="transition-modal-title"
+              aria-describedby="transition-modal-description"
+              className={classes.modal}
+              open={openRegister}
+              onClose={handleRegisterClose}
+              closeAfterTransition
+              BackdropComponent={Backdrop}
+              BackdropProps={{
+                timeout: 500,
+              }}
+            >
+
+              <Fade in={openRegister}>
+                <div className={classes.paper}>
+                 <SignUp />
+                </div>
+              </Fade>
+            </Modal>
+
+          </Toolbar>
+        </AppBar>
+      </div>
+    );
+
+    case 'logedInUser':
+    return (
+      <div className={classes.root}>
+        <AppBar position="static">
+          <Toolbar>
+            <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+              <MenuIcon />
+            </IconButton>
+
+            <Typography variant="h6" className={classes.title}>
+              News
+            </Typography>
+
+            <Button color="inherit" onClick={handleLogOut}>LogOut</Button>
+            <Button color="inherit" onClick={handleProfileOpen}>Profile</Button>
+
+            <Modal
+              aria-labelledby="transition-modal-title"
+              aria-describedby="transition-modal-description"
+              className={classes.modal}
+              open={openProfile}
+              onClose={handleProfileClose}
+              closeAfterTransition
+              BackdropComponent={Backdrop}
+              BackdropProps={{
+                timeout: 500,
+              }}
+            >
+
+            <Fade in={openProfile}>
+              <div className={classes.paper}>
+               <Profile />
+              </div>
+            </Fade>
+          </Modal>
+
+
+          </Toolbar>
+        </AppBar>
+      </div>
+    );
+  };
 }
