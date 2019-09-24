@@ -12,9 +12,26 @@ import Parallax from './components/parallax.js';
 
 class App extends React.Component {
 
+componentDidMount(){
+  if ([localStorage.length] == true) {
+    this.setState ({
+      userStatus: 'logedInUser'
+    })
+  } else if ([localStorage.length] === 0){
+    this.setState ({
+      userStatus: 'newUser'
+    })
+  } else {
+    this.setState ({
+      userStatus: 'newUser'
+    })
+  };
+}
+
 state = {
   userStatus: 'newUser'
 }
+
 
 handleStateChange = () => {
   this.setState ({
@@ -29,9 +46,10 @@ handleLogOutChange = () => {
 }
 
   render() {
+
     return (
       <div>
-          <ButtonAppBar position="sticky" userStatus={this.state.userStatus} handleStateChange={this.handleStateChange} handleLogOutChange={this.handleLogOutChange}/>
+          <ButtonAppBar position="sticky" userStatus={this.state.userStatus} handleStateChange={this.handleStateChange} handleLogOutChange={this.handleLogOutChange} handleStillLogedIn={this.handleStillLogedIn}/>
           <Parallax />
           <NavTabs />
           <Sponsors />

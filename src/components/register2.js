@@ -55,7 +55,7 @@ const useStyles = makeStyles(theme => ({
 
 
 
-export default function SignIn(props) {
+export default function Register(props) {
 
   const classes = useStyles();
 
@@ -63,31 +63,25 @@ export default function SignIn(props) {
 
   const [name, setName] = React.useState('');
   const [password, setPassword] = React.useState('');
+  const [email, setEmail] = React.useState('');
+  const [location, setLocation] = React.useState('');
+  const [skills, setSkills] = React.useState('');
 
-  
 
   const handleLoginSubmit = (e) => {
     e.preventDefault()
 
-    fetch('http://localhost:3000/login', {
+    fetch('http://localhost:3000/signup', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({name: name, password: password})
+      body: JSON.stringify({name: name, password: password, email: email, skills: skills, location: location})
     })
 
     .then(res => res.json())
-    .then(data => {
-      console.log(data)
-      if (data.jwt) {
-        localStorage.jwt = data.jwt
-
-        props.handleStateChange();
-      }
-    })
-  props.handleStateChange();
+    .then(console.log)
   }
 // ----------------------------
   return (
@@ -98,7 +92,7 @@ export default function SignIn(props) {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Sign in
+          Register
         </Typography>
         <form className={classes.form} noValidate onSubmit={handleLoginSubmit}>
           <TextField
@@ -114,6 +108,21 @@ export default function SignIn(props) {
             onChange={e => setName(e.target.value)}
             value={name}
           />
+
+          <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            id="email"
+            label="Email"
+            name="email"
+            autoComplete="email"
+            autoFocus
+            onChange={e => setEmail(e.target.value)}
+            value={email}
+          />
+
           <TextField
             variant="outlined"
             margin="normal"

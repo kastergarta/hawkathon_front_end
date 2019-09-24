@@ -17,6 +17,7 @@ import SignUp from './signup.js';
 import Profile from './profile.js';
 
 import SignIn from './login2.js'
+import Register from './register2.js'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -136,7 +137,7 @@ export default function ButtonAppBar(props) {
 
               <Fade in={openRegister}>
                 <div className={classes.paper}>
-                 <SignUp />
+                 <Register handleStateChange={props.handleStateChange}/>
                 </div>
               </Fade>
             </Modal>
