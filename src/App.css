@@ -67,3 +67,38 @@ img {
   align-items: center;
   height: 330px;
 }
+
+/* --------------------------- */
+
+.parallaxtext {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 250px;
+  margin-bottom: 300px;
+}
+
+#parallax-text-text {
+  color: white;
+  width: 900px;
+  font-size: 30px;
+  text-shadow: 2px 2px black;
+}
+
+#parallax-text-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-grad {
+  background-image: linear-gradient(to right, #FF512F 0%, #DD2476 51%, #FF512F 100%);
+  color: white;
+  border: none;
+  padding: 10px;
+  
+}
+
+.btn-grad:hover {
+  background-position: right center;
+}

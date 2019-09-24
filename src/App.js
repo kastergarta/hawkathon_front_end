@@ -7,10 +7,7 @@ import Sponsors from './components/sponsors.js';
 import Judges from './components/judges.js';
 import JudgesCard from './components/judgescard.js';
 import SimpleExpansionPanel from './components/expansionpanels.js';
-
-
-
-
+import Parallax from './components/parallax.js';
 
 
 class App extends React.Component {
@@ -35,6 +32,7 @@ handleLogOutChange = () => {
     return (
       <div>
           <ButtonAppBar position="sticky" userStatus={this.state.userStatus} handleStateChange={this.handleStateChange} handleLogOutChange={this.handleLogOutChange}/>
+          <Parallax />
           <NavTabs />
           <Sponsors />
           <Judges />

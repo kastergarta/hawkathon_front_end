@@ -5,7 +5,7 @@ import classNames from "classnames";
 import PropTypes from "prop-types";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import MainPoints from './mainpoints.js';
+import ParallaxText from './parallaxtext.js'
 
 // core components
 import parallaxStyle from "../parallaxStyle.js";
@@ -38,7 +38,9 @@ export default function Parallax(props) {
     setTransform("translate3d(0," + windowScrollTop + "px,0)");
   };
   const { filter, className, children, style, image, small } = props;
+
   const classes = useStyles();
+
   const parallaxClasses = classNames({
     [classes.parallax]: true,
     [classes.filter]: filter,
@@ -56,7 +58,7 @@ export default function Parallax(props) {
       }}
     >
       {children}
-      
+      < ParallaxText />
     </div>
   );
 }
