@@ -16,6 +16,8 @@ import LogIn from './login.js';
 import SignUp from './signup.js';
 import Profile from './profile.js';
 
+import SignIn from './login2.js'
+
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
@@ -114,7 +116,7 @@ export default function ButtonAppBar(props) {
 
             <Fade in={openLogin}>
               <div className={classes.paper}>
-               <LogIn handleStateChange={props.handleStateChange}/>
+               <SignIn handleStateChange={props.handleStateChange}/>
               </div>
             </Fade>
           </Modal>
@@ -175,7 +177,7 @@ export default function ButtonAppBar(props) {
 
             <Fade in={openProfile}>
               <div className={classes.paper}>
-               <Profile />
+               <SignUp />
               </div>
             </Fade>
           </Modal>
