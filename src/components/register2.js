@@ -13,6 +13,8 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
+import * as emailjs from 'emailjs-com';
+
 function Copyright() {
 
 
@@ -45,7 +47,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.secondary.main,
   },
   form: {
-    width: '100%', // Fix IE 11 issue.
+    width: '100%',
     marginTop: theme.spacing(1),
   },
   submit: {
@@ -67,7 +69,6 @@ export default function Register(props) {
   const [location, setLocation] = React.useState('');
   const [skills, setSkills] = React.useState('');
 
-
   const handleLoginSubmit = (e) => {
     e.preventDefault()
 
@@ -82,6 +83,19 @@ export default function Register(props) {
 
     .then(res => res.json())
     .then(console.log)
+
+    let templateParams = {
+      user_name: name,
+      user_email: email,
+      message_html: "Hi!",
+     }
+
+     emailjs.send(
+      "hawkaton.us@gmail.com",
+      'template_OztCtOOX',
+       templateParams,
+      'user_qkmMCvLoKG06KjZD3u8VY'
+     )
   }
 // ----------------------------
   return (
