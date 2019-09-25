@@ -8,6 +8,7 @@ import Judges from './components/judges.js';
 import JudgesCard from './components/judgescard.js';
 import SimpleExpansionPanel from './components/expansionpanels.js';
 import Parallax from './components/parallax.js';
+// import SimpleSnackbar from './components/simplesnackbar.js'
 
 
 class App extends React.Component {

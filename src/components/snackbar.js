@@ -14,24 +14,12 @@ import WarningIcon from '@material-ui/icons/Warning';
 import { makeStyles } from '@material-ui/core/styles';
 
 const variantIcon = {
-  success: CheckCircleIcon,
-  warning: WarningIcon,
-  error: ErrorIcon,
-  info: InfoIcon,
+  success: CheckCircleIcon
 };
 
 const useStyles1 = makeStyles(theme => ({
   success: {
     backgroundColor: green[600],
-  },
-  error: {
-    backgroundColor: theme.palette.error.dark,
-  },
-  info: {
-    backgroundColor: theme.palette.primary.main,
-  },
-  warning: {
-    backgroundColor: amber[700],
   },
   icon: {
     fontSize: 20,

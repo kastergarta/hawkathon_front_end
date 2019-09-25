@@ -5,7 +5,7 @@ import classNames from "classnames";
 import PropTypes from "prop-types";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import ParallaxText from './parallaxtext.js'
+import ParallaxText from './parallaxtext2.js'
 
 // core components
 import parallaxStyle from "../parallaxStyle.js";
