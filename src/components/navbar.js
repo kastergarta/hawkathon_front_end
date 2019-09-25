@@ -14,7 +14,7 @@ import Fade from '@material-ui/core/Fade';
 
 import LogIn from './login.js';
 import SignUp from './signup.js';
-import Profile from './profile.js';
+import Checkout from './profile2template.js';
 
 import SignIn from './login2.js'
 // import CustomizedSnackbars from './login2.js'
@@ -90,7 +90,7 @@ export default function ButtonAppBar(props) {
             </IconButton>
 
             <Typography variant="h6" className={classes.title}>
-              News
+              HAWKATHON
             </Typography>
 
             <Button color="inherit" onClick={handleLoginOpen}>Login</Button>
@@ -172,7 +172,7 @@ export default function ButtonAppBar(props) {
 
             <Fade in={openProfile}>
               <div className={classes.paper}>
-               <Profile />
+               <Checkout />
               </div>
             </Fade>
           </Modal>
