@@ -83,13 +83,22 @@ class Profile extends Component {
    createCheckboxes = () => OPTIONS.map(this.createCheckbox);
 
   componentDidMount() {
+
+    console.log(localStorage.jwt)
+    if (localStorage.jwt === undefined) {
+      return;
+    }
+
     fetch('http://localhost:3000/profile',{
       headers: {
         'Authorization': `Bearer ${localStorage.jwt}`
       }
     })
     .then(res => res.json())
-    .then(data => this.setState({name: data.user.name, skills: data.user.skills, id: data.user.id}))
+    .then(data =>{
+      console.log(data);
+      this.setState({name: data.user.name, skills: data.user.skills, id: data.user.id})}
+    )
 
   }
 

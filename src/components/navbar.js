@@ -17,6 +17,7 @@ import SignUp from './signup.js';
 import Profile from './profile.js';
 
 import SignIn from './login2.js'
+// import CustomizedSnackbars from './login2.js'
 import Register from './register2.js'
 
 const useStyles = makeStyles(theme => ({
@@ -178,7 +179,7 @@ export default function ButtonAppBar(props) {
 
             <Fade in={openProfile}>
               <div className={classes.paper}>
-               <SignUp />
+               <Profile />
               </div>
             </Fade>
           </Modal>
