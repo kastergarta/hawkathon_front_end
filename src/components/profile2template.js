@@ -64,7 +64,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const steps = ['Shipping address', 'Payment details', 'Review your order'];
+const steps = ['Update General Info', 'Tech Skills', 'Soft Skills'];
 
 function getStepContent(step) {
   switch (step) {
@@ -111,11 +111,13 @@ export default function Checkout() {
             {activeStep === steps.length ? (
               <React.Fragment>
                 <Typography variant="h5" gutterBottom>
-                  Thank you for your order.
+                  Thank you! Looking forward to see you on next Hawkathon.
                 </Typography>
+                <div>
+                  <img src="https://cdn.dribbble.com/users/184987/screenshots/3817954/minnaso_highfive2.png"/>
+                </div>
                 <Typography variant="subtitle1">
-                  Your order number is #2001539. We have emailed your order confirmation, and will
-                  send you an update when your order has shipped.
+                  Everything is OK
                 </Typography>
               </React.Fragment>
             ) : (
@@ -133,7 +135,7 @@ export default function Checkout() {
                     onClick={handleNext}
                     className={classes.button}
                   >
-                    {activeStep === steps.length - 1 ? 'Place order' : 'Next'}
+                    {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
                   </Button>
                 </div>
               </React.Fragment>

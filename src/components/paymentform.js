@@ -174,7 +174,7 @@ const handleFormSubmit = (e) => {
               onChange={e => setKotlinSkill(e.target.value)}
             />
           </Grid>
-          <Button className={classes.button} onClick={handleFormSubmit}>SAVE</Button>
+          <Button variant="contained" color="secondary" className={classes.button} className={classes.button} onClick={handleFormSubmit}>SAVE</Button>
       </Grid>
     </React.Fragment>
   );

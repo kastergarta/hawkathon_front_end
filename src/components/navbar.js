@@ -11,6 +11,10 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
+import Hidden from '@material-ui/core/Hidden'
+import Link from '@material-ui/core/Link'
+
+
 
 import LogIn from './login.js';
 import SignUp from './signup.js';
@@ -85,12 +89,27 @@ export default function ButtonAppBar(props) {
       <div className={classes.root}>
         <AppBar position="fixed">
           <Toolbar>
-            <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-              <MenuIcon />
-            </IconButton>
 
             <Typography variant="h6" className={classes.title}>
-              HAWKATHON
+              <Link href="/">
+                  <a>
+                    <Hidden mdUp>
+                      <img
+                        className={classes.mobileHeaderImage}
+                        src="https://images.vexels.com/media/users/3/159193/isolated/lists/24fff859c08bd86c845b01bba458481d-bird-eagle-wing-beak-silhouette.png"
+                        height="50" width="50"
+                      />
+                    </Hidden>
+                    <Hidden smDown>
+                      <img
+                        className={classes.headerImage}
+                        src="https://images.vexels.com/media/users/3/159193/isolated/lists/24fff859c08bd86c845b01bba458481d-bird-eagle-wing-beak-silhouette.png"
+                          height="50" width="50"
+                      />
+                    </Hidden>
+                  </a>
+                </Link>
+                HAWKATHON
             </Typography>
 
             <Button color="inherit" onClick={handleLoginOpen}>Login</Button>
@@ -144,14 +163,28 @@ export default function ButtonAppBar(props) {
     case 'logedInUser':
     return (
       <div className={classes.root}>
-        <AppBar position="static">
+        <AppBar position="fixed">
           <Toolbar>
-            <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-              <MenuIcon />
-            </IconButton>
-
             <Typography variant="h6" className={classes.title}>
-              News
+            <Link href="/">
+                <a>
+                  <Hidden mdUp>
+                    <img
+                      className={classes.mobileHeaderImage}
+                      src="https://images.vexels.com/media/users/3/159193/isolated/lists/24fff859c08bd86c845b01bba458481d-bird-eagle-wing-beak-silhouette.png"
+                      height="50" width="50"
+                    />
+                  </Hidden>
+                  <Hidden smDown>
+                    <img
+                      className={classes.headerImage}
+                      src="https://images.vexels.com/media/users/3/159193/isolated/lists/24fff859c08bd86c845b01bba458481d-bird-eagle-wing-beak-silhouette.png"
+                        height="50" width="50"
+                    />
+                  </Hidden>
+                </a>
+              </Link>
+              HAWKATHON
             </Typography>
 
             <Button color="inherit" onClick={handleLogOut}>LogOut</Button>

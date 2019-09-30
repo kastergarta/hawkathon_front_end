@@ -74,7 +74,7 @@ export default function Review() {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${localStorage.jwt}`
       },
-      body: JSON.stringify({teamplayer: teamPlayer, communication: communication, patience: patience, creativity: creativity, projectmanagement: projectManagement})
+      body: JSON.stringify({teamplayer: teamPlayer, communication: communication, patience: patience, creativity: creativity, projectmanagement: projectManagement, adaptability: adaptability})
     })
     .then(res => res.json())
     .then(console.log)
@@ -200,7 +200,7 @@ export default function Review() {
             />
           </div>
         </Grid>
-        <Button className={classes.button} onClick={handleFormSubmit}>SAVE</Button>
+        <Button variant="contained" color="secondary" className={classes.button} className={classes.button} onClick={handleFormSubmit}>SAVE</Button>
       </Grid>
     </React.Fragment>
   );

@@ -72,7 +72,7 @@ export default function Register(props) {
   const handleLoginSubmit = (e) => {
     e.preventDefault()
 
-    fetch('http://localhost:3000/signup', {
+    fetch('http://localhost:3001/signup', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',

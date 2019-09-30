@@ -73,7 +73,7 @@ export default function AddressForm() {
   return (
     <React.Fragment>
       <Typography variant="h6" gutterBottom>
-        Shipping address
+        General info
       </Typography>
       <Grid container spacing={3}>
 
@@ -124,7 +124,7 @@ export default function AddressForm() {
             onChange={e => setPassword(e.target.value)}
           />
         </Grid>
-          <Button className={classes.button} onClick={handleFormSubmit}>SAVE</Button>
+          <Button variant="contained" color="secondary" className={classes.button} className={classes.button} onClick={handleFormSubmit}>SAVE</Button>
       </Grid>
     </React.Fragment>
   );
