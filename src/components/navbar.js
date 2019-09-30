@@ -53,6 +53,7 @@ export default function ButtonAppBar(props) {
   const [openLogin, setOpenLogin] = React.useState(false);
   const [openRegister, setOpenRegister] = React.useState(false);
   const [openProfile, setOpenProfile] = React.useState(false);
+  const [openDonate, setOpenDonate] = React.useState(false);
 
   const handleLoginOpen = () => {
     setOpenLogin(true);

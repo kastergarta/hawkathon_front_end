@@ -8,9 +8,9 @@ import JudgesCard from './components/judgescard.js';
 import SimpleExpansionPanel from './components/expansionpanels.js';
 import Parallax from './components/parallax.js';
 import Footer from './components/footer.js';
+import Donate from './components/donate.js';
 
 // import SimpleSnackbar from './components/simplesnackbar.js'
-
 
 class App extends React.Component {
 
@@ -54,6 +54,7 @@ handleLogOutChange = () => {
           <ButtonAppBar position="sticky" userStatus={this.state.userStatus} handleStateChange={this.handleStateChange} handleLogOutChange={this.handleLogOutChange} handleStillLogedIn={this.handleStillLogedIn}/>
           <Parallax />
           <NavTabs />
+          <Donate />
           <Sponsors />
           <JudgesCard />
           <SimpleExpansionPanel />
