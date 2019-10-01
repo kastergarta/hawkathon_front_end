@@ -3,17 +3,24 @@ import ReactDOM from "react-dom";
 import StripeCheckout from "react-stripe-checkout";
 import axios from "axios";
 import { toast } from "react-toastify";
+import Slider from '@material-ui/core/Slider';
+
 
 import "react-toastify/dist/ReactToastify.css";
 
 toast.configure();
 
 export default function Donate() {
-  const [product] = React.useState({
-    name: "Help a Developer",
-    price: 1,
+
+  const [product, setProduct] = React.useState({
+    name: "Your contribution supports the future of NYC developers community. Hawkathon couldn't exist without your support. We attract bright software engineers from around the country, encouraging them to learn and build in a mentorship-focused environment. ",
+    price: 0,
     description: "Thank you!"
   });
+
+  const [name, setName] = React.useState("Help a Developer");
+  const [price, setPrice] = React.useState(0);
+  const [description, setDescription] = React.useState("Thank you!");
 
   async function handleToken(token, addresses) {
     console.log({token, addresses})
@@ -31,10 +38,21 @@ export default function Donate() {
   }
 
   return (
-    <div className="container">
-      <div className="product">
+    <div className="container-donate">
+      <div className="product-donate">
         <h1>{product.name}</h1>
-        <h3>{product.price}</h3>
+      </div>
+      <div className="slider-donate">
+        <Slider
+          aria-labelledby="discrete-slider"
+          valueLabelDisplay="auto"
+          step={1}
+          marks
+          min={0}
+          max={10}
+          value={price}
+          onChange={(e, value) => setPrice(value)}
+        />
       </div>
       <StripeCheckout
         stripeKey="pk_test_reJ1gPlT5b6yX5bGa5byalsA000zHz5Qqq"

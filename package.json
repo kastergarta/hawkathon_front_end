@@ -11,6 +11,7 @@
     "emailjs-com": "^2.4.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-reveal": "^1.2.2",
     "react-scripts": "3.1.1",
     "react-slick": "^0.25.2",
     "react-stripe-checkout": "^2.6.3",

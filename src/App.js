@@ -9,6 +9,8 @@ import SimpleExpansionPanel from './components/expansionpanels.js';
 import Parallax from './components/parallax.js';
 import Footer from './components/footer.js';
 import Donate from './components/donate.js';
+import JumpExample from './components/fadejudges.js';
+import JumpFAQ from './components/fadefaq.js';
 
 // import SimpleSnackbar from './components/simplesnackbar.js'
 
@@ -56,7 +58,9 @@ handleLogOutChange = () => {
           <NavTabs />
           <Donate />
           <Sponsors />
+          <JumpExample />
           <JudgesCard />
+          <JumpFAQ />
           <SimpleExpansionPanel />
           <Footer />
       </div>

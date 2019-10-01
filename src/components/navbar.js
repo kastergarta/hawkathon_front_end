@@ -13,6 +13,8 @@ import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import Hidden from '@material-ui/core/Hidden'
 import Link from '@material-ui/core/Link'
+import { borders } from '@material-ui/system';
+
 
 
 
@@ -41,7 +43,8 @@ const useStyles = makeStyles(theme => ({
   },
   paper: {
     backgroundColor: theme.palette.background.paper,
-    border: '2px solid #000',
+    border: '2px solid white',
+    borderRadius: '16px',
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
   },

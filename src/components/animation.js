@@ -1,4 +1,7 @@
 // Wrap every letter in a span
+
+import anime from 'animejs/lib/anime.es.js';
+
 var textWrapper = document.querySelector('.ml1 .letters');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
@@ -26,5 +29,3 @@ anime.timeline({loop: true})
     easing: "easeOutExpo",
     delay: 1000
   });
- SourceTHURSDAY
- SourceSunny mornings
