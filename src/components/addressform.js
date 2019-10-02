@@ -34,7 +34,7 @@ export default function AddressForm() {
       return;
     }
 
-    fetch('http://localhost:3001/profile',{
+    fetch('http://localhost:3003/profile',{
       headers: {
         'Authorization': `Bearer ${localStorage.jwt}`
       }
@@ -57,7 +57,7 @@ export default function AddressForm() {
 
     e.preventDefault();
 
-    fetch(`http://localhost:3001/users/${id}`, {
+    fetch(`http://localhost:3003/users/${id}`, {
       method: 'PATCH',
       headers: {
         'Accept': 'application/json',

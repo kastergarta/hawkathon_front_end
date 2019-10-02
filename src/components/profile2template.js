@@ -13,13 +13,14 @@ import Typography from '@material-ui/core/Typography';
 import AddressForm from './addressform.js';
 import PaymentForm from './paymentform.js';
 import Review from './review.js';
+import YourProfile from './yourprofile.js';
 
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+        Hawkathon
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -64,15 +65,17 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const steps = ['Update General Info', 'Tech Skills', 'Soft Skills'];
+const steps = ['Your Profile', 'Update General Info', 'Tech Skills', 'Soft Skills'];
 
 function getStepContent(step) {
   switch (step) {
     case 0:
-      return <AddressForm />;
+      return <YourProfile />
     case 1:
-      return <PaymentForm />;
+      return <AddressForm />;
     case 2:
+      return <PaymentForm />;
+    case 3:
       return <Review />;
     default:
       throw new Error('Unknown step');
@@ -109,17 +112,18 @@ export default function Checkout() {
           </Stepper>
           <React.Fragment>
             {activeStep === steps.length ? (
+              <div className="high-five">
+              <div>
               <React.Fragment>
                 <Typography variant="h5" gutterBottom>
-                  Thank you! Looking forward to see you on next Hawkathon.
-                </Typography>
-                <div>
-                  <img src="https://cdn.dribbble.com/users/184987/screenshots/3817954/minnaso_highfive2.png"/>
-                </div>
-                <Typography variant="subtitle1">
-                  Everything is OK
+                  Great! You are all set. Looking forward to see you on next Hawkathon.
                 </Typography>
               </React.Fragment>
+              <div>
+                <img src="https://cdn.dribbble.com/users/187497/screenshots/1548634/mailchimp-high5.gif"/>
+              </div>
+              </div>
+              </div>
             ) : (
               <React.Fragment>
                 {getStepContent(activeStep)}

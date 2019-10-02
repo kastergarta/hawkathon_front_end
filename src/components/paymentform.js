@@ -120,56 +120,56 @@ const handleFormSubmit = (e) => {
         </Grid>
         <Grid item xs={3} sm={3}>
           <FormControlLabel
-            control={<Checkbox color="secondary" name="saveCard" value="yes" />}
+            control={<Checkbox color="secondary" name="saveCard" value="React" />}
             label="React"
             onChange={e => setReactSkill(e.target.value)}
           />
         </Grid>
         <Grid item xs={3} sm={3}>
           <FormControlLabel
-            control={<Checkbox color="secondary" name="saveCard" value="yes" />}
+            control={<Checkbox color="secondary" name="saveCard" value="Angular" />}
             label="Angular"
             onChange={e => setAngularSkill(e.target.value)}
           />
         </Grid>
         <Grid item xs={3} sm={3}>
           <FormControlLabel
-            control={<Checkbox color="secondary" name="saveCard" value="yes" />}
+            control={<Checkbox color="secondary" name="saveCard" value="C++" />}
             label="C++"
             onChange={e => setCSkill(e.target.value)}
           />
         </Grid>
           <Grid item xs={3} sm={3}>
             <FormControlLabel
-              control={<Checkbox color="secondary" name="saveCard" value="yes" />}
+              control={<Checkbox color="secondary" name="saveCard" value="CSS" />}
               label="CSS"
               onChange={e => setCSSSkill(e.target.value)}
             />
           </Grid>
           <Grid item xs={3} sm={3}>
             <FormControlLabel
-              control={<Checkbox color="secondary" name="saveCard" value="yes" />}
+              control={<Checkbox color="secondary" name="saveCard" value="R" />}
               label="R"
               onChange={e => setRSkill(e.target.value)}
             />
           </Grid>
           <Grid item xs={3} sm={3}>
             <FormControlLabel
-              control={<Checkbox color="secondary" name="saveCard" value="yes" />}
+              control={<Checkbox color="secondary" name="saveCard" value="Rust" />}
               label="Rust"
               onChange={e => setRustSkill(e.target.value)}
             />
           </Grid>
           <Grid item xs={3} sm={3}>
             <FormControlLabel
-              control={<Checkbox color="secondary" name="saveCard" value="yes" />}
+              control={<Checkbox color="secondary" name="saveCard" value="GraphQL" />}
               label="GraphQl"
               onChange={e => setGraphQLSkill(e.target.value)}
             />
           </Grid>
           <Grid item xs={3} sm={3}>
             <FormControlLabel
-              control={<Checkbox color="secondary" name="saveCard" value="yes" />}
+              control={<Checkbox color="secondary" name="saveCard" value="Kotlin" />}
               label="Kotlin"
               onChange={e => setKotlinSkill(e.target.value)}
             />

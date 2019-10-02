@@ -161,3 +161,21 @@ line-height: 100px;
   text-align: center;
   height: 100px;
 }
+
+.techskills {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.single-techskill {
+  padding: 5px;
+  font-size: 25px;
+}
+
+.high-five {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}

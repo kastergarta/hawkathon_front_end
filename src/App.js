@@ -17,7 +17,8 @@ import JumpFAQ from './components/fadefaq.js';
 class App extends React.Component {
 
 componentDidMount(){
-  if ([localStorage.length] == true) {
+  console.log("Mount!");
+  if ([localStorage.length] == 2) {
     this.setState ({
       userStatus: 'logedInUser'
     })
