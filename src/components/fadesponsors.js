@@ -6,7 +6,7 @@ class JumpExample extends React.Component {
     return (
       <div>
         <Jump>
-          <h1>React Reveal</h1>
+          <h1>SPONSORS</h1>
         </Jump>
       </div>
     );

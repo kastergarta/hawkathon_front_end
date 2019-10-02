@@ -22,11 +22,12 @@ export default function JudgesCard() {
 
   return (
     <div className="judges-card-container">
+
     <Card className={classes.card}>
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="/static/images/cards/contemplative-reptile.jpg"
+          image="https://i.pinimg.com/originals/2a/f3/33/2af33342505baca3946ed5997b21bdac.jpg"
           title="Contemplative Reptile"
         />
         <CardContent>
@@ -97,7 +98,7 @@ export default function JudgesCard() {
         </CardContent>
       </CardActionArea>
     </Card>
-    
+
     </div>
   );
 }

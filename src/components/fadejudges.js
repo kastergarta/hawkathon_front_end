@@ -6,7 +6,7 @@ class JumpExample extends React.Component {
     return (
       <div className="jump-judges">
         <Jump>
-          <h1>Judges</h1>
+          <h1>JUDGES</h1>
         </Jump>
       </div>
     );

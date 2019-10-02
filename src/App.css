@@ -16,7 +16,7 @@ img {
 }
 
 .sponsors {
-  background-color: white;
+  background-image: url('https://media2.giphy.com/media/zXI8NnFw2oyXe/source.gif');
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -121,6 +121,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 10px;
 
 }
 
@@ -154,7 +155,7 @@ line-height: 100px;
 
 .jump-judges {
   text-align: center;
-  height: 100px;
+  height: 50px;
 }
 
 .jump-faq {
@@ -178,4 +179,9 @@ line-height: 100px;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+}
+
+.timer {
+  color: white;
+  font-size: 40px;
 }
