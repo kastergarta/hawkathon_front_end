@@ -53,7 +53,7 @@ export default function Parallax(props) {
       className={parallaxClasses}
       style={{
         ...style,
-        backgroundImage: "url(https://www.theuiaa.org/wp-content/uploads/2017/12/2018_banner.jpg)",
+        backgroundImage: "url(https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80)",
         transform: transform
       }}
     >

@@ -13,6 +13,7 @@ img {
   position: relative;
   text-align: center;
   color: white;
+  font-size: 30px;
 }
 
 .sponsors {
@@ -132,7 +133,7 @@ line-height: 100px;
 }
 
 .container-donate {
-  background-image: url(https://freerangestock.com/sample/119020/charity-donation-.jpg);
+  background-image: url(https://media0.giphy.com/media/114O4jlDapmMdW/source.gif);
   height: 500px;
   display: flex;
   align-items: center;
@@ -143,9 +144,9 @@ line-height: 100px;
 .product-donate {
   height: 300px;
   width: 1000px;
-  color: white;
+  color: violet;
   font-size: 40px;
-  text-shadow: 2px 2px #ff0000;
+  text-shadow: 2px 2px grey;
 }
 
 .slider-donate {
@@ -156,11 +157,13 @@ line-height: 100px;
 .jump-judges {
   text-align: center;
   height: 50px;
+  color: #f50057;
 }
 
 .jump-faq {
   text-align: center;
   height: 100px;
+  color: #f50057;
 }
 
 .techskills {
@@ -184,4 +187,8 @@ line-height: 100px;
 .timer {
   color: white;
   font-size: 40px;
+}
+
+.jump-sponsors {
+  color: #f50057;
 }

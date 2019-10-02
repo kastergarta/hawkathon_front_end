@@ -64,7 +64,7 @@ export default function AddressForm() {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${localStorage.jwt}`
       },
-      body: JSON.stringify({name: name, email: email, password: password})
+      body: JSON.stringify({name: name, email: email, password: password, location: location})
     })
     .then(res => res.json())
     .then(console.log)

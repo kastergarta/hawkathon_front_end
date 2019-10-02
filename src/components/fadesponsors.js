@@ -4,7 +4,7 @@ import Jump from 'react-reveal/Jump';
 class JumpExample extends React.Component {
   render() {
     return (
-      <div>
+      <div className="jump-sponsors">
         <Jump>
           <h1>SPONSORS</h1>
         </Jump>
