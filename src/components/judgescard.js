@@ -35,8 +35,7 @@ export default function JudgesCard() {
             Randy Herasme
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+            I am a full-stack developer who welcomes challenge and creativity. My previous experience as an educator has instilled a team-first and problem-solving approach to every challenge.
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -46,16 +45,15 @@ export default function JudgesCard() {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="https://www.linkedin.com/in/hyeokjungkim/detail/photo/"
+          image="http://kevinmcalear.com/assets/pics/profile.jpg"
           title="Judge 2"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Eric Kim
+            Kevin McAlear
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+            If you would like to learn more about who I am, get a better understanding of my skills, and see projects I've done please visit my website.
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -73,8 +71,8 @@ export default function JudgesCard() {
             Annie Souza
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+          I am passionate about learning and solving puzzles.
+My background is in Education where I learned the impact of working in groups and learned how to communicate according to the audience target.
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -92,8 +90,7 @@ export default function JudgesCard() {
             Graham Troyer-Joy
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+          I’m a passionate digital creator, a relentless innovator, a creative thought leader, an advocate for user-centered design. I’m meticulous about alignment between tactics and strategy and fanatical about process.
           </Typography>
         </CardContent>
       </CardActionArea>

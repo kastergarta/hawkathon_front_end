@@ -12,15 +12,19 @@ toast.configure();
 
 export default function Donate() {
 
-  const [product, setProduct] = React.useState({
-    name: "Your contribution supports the future of NYC developers community. Hawkathon couldn't exist without your support. We attract bright software engineers from around the country, encouraging them to learn and build in a mentorship-focused environment. ",
-    price: 0,
-    description: "Thank you!"
-  });
+  // const [product, setProduct] = React.useState({
+  //   name: "Your contribution supports the future of NYC developers community. Hawkathon couldn't exist without your support. We attract bright software engineers from around the country, encouraging them to learn and build in a mentorship-focused environment. ",
+  //   price: 1,
+  //   description: "Thank you!"
+  // });
 
-  const [name, setName] = React.useState("Help a Developer");
-  const [price, setPrice] = React.useState(0);
-  const [description, setDescription] = React.useState("Thank you!");
+
+  const [iname, setIName] = React.useState("Your contribution supports the future of NYC developers community. Hawkathon couldn't exist without your support. We attract bright software engineers from around the country, encouraging them to learn and build in a mentorship-focused environment. ");
+  const [iprice, setIPrice] = React.useState(1);
+  const [idescription, setIDescription] = React.useState("Thank you!");
+
+  const product = {name: iname, price: iprice, description: idescription}
+
 
   async function handleToken(token, addresses) {
     console.log({token, addresses})
@@ -50,8 +54,8 @@ export default function Donate() {
           marks
           min={0}
           max={10}
-          value={price}
-          onChange={(e, value) => setPrice(value)}
+          value={iprice}
+          onChange={(e, value) => setIPrice(value)}
         />
       </div>
       <StripeCheckout

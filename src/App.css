@@ -13,7 +13,7 @@ img {
   position: relative;
   text-align: center;
   color: white;
-  font-size: 30px;
+  font-size: 60px;
 }
 
 .sponsors {
@@ -65,7 +65,7 @@ img {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
   height: 330px;
 }
 
@@ -144,9 +144,9 @@ line-height: 100px;
 .product-donate {
   height: 300px;
   width: 1000px;
-  color: violet;
+  color: #f50057;
   font-size: 40px;
-  text-shadow: 2px 2px grey;
+  text-shadow: 2px 2px lightgrey;
 }
 
 .slider-donate {

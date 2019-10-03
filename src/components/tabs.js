@@ -80,19 +80,19 @@ export default function NavTabs() {
       </AppBar>
       <TabPanel value={value} index={0}>
         <div className="tabs-container">
-          <img src="https://asiamountains.net/upload/slide/slide-1960x857-07.jpg" />
+          <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80" />
           <div className="bottom-left">Hawkathon participants have represented 151 countries and thousands of unique skill sets. Our program welcomes everyone already in the open source software community – and anyone interested in diving in. </div>
         </div>
       </TabPanel>
       <TabPanel value={value} index={1}>
           <div className="tabs-container">
-            <img src="https://asiamountains.net/upload/slide/slide-1960x857-07.jpg" />
+            <img src="https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80" />
             <div className="bottom-left"> Participating in Hawkathon leads to personal growth, professional opportunities, and community building. And it all begins with meaningful contributions to open source technology. </div>
           </div>
       </TabPanel>
       <TabPanel value={value} index={2}>
       <div className="tabs-container">
-        <img src="https://asiamountains.net/upload/slide/slide-1960x857-07.jpg" />
+        <img src="https://images.unsplash.com/photo-1526666923127-b2970f64b422?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1504&q=80" />
         <div className="bottom-left"> In the open source community, we stand on the shoulders of those who came before us. Your participation has a lasting effect on people and technology long after Hawkathon comes to an end. This is a voyage, not a race. </div>
       </div>
       </TabPanel>

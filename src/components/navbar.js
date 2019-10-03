@@ -100,14 +100,14 @@ export default function ButtonAppBar(props) {
                     <Hidden mdUp>
                       <img
                         className={classes.mobileHeaderImage}
-                        src="https://images.vexels.com/media/users/3/159193/isolated/lists/24fff859c08bd86c845b01bba458481d-bird-eagle-wing-beak-silhouette.png"
+                        src="https://backgroundcheckall.com/wp-content/uploads/2017/12/logo-background-png-10.png"
                         height="50" width="50"
                       />
                     </Hidden>
                     <Hidden smDown>
                       <img
                         className={classes.headerImage}
-                        src="https://images.vexels.com/media/users/3/159193/isolated/lists/24fff859c08bd86c845b01bba458481d-bird-eagle-wing-beak-silhouette.png"
+                        src="https://backgroundcheckall.com/wp-content/uploads/2017/12/logo-background-png-10.png"
                           height="50" width="50"
                       />
                     </Hidden>
