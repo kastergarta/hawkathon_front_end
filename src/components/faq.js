@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function SimpleExpansionPanel() {
+export default function FAQ() {
   const classes = useStyles();
 
   return (

@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function BadgeInfo() {
+export default function ProfileInfo() {
   const classes = useStyles();
 
   const [id, setId] = React.useState('');

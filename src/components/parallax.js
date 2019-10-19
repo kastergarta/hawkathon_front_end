@@ -1,13 +1,8 @@
 import React from "react";
-// nodejs library that concatenates classes
 import classNames from "classnames";
-// nodejs library to set properties for components
 import PropTypes from "prop-types";
-// @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import ParallaxText from './parallaxtext2.js'
-
-// core components
+import ParallaxText from './parallaxtext.js'
 import parallaxStyle from "../parallaxStyle.js";
 const useStyles = makeStyles(parallaxStyle);
 

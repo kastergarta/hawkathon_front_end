@@ -1,16 +1,16 @@
 import React from 'react';
 import Jump from 'react-reveal/Jump';
 
-class JumpExample extends React.Component {
+class FAQHeadLine extends React.Component {
   render() {
     return (
-      <div className="jump-sponsors">
+      <div className="jump-faq">
         <Jump>
-          <h1>SPONSORS</h1>
+          <h1>FAQ</h1>
         </Jump>
       </div>
     );
   }
 }
 
-export default JumpExample;
+export default FAQHeadLine;

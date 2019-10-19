@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function AddressForm() {
+export default function UpdateGeneralInfo() {
 
   const classes = useStyles();
 
@@ -43,9 +43,6 @@ export default function AddressForm() {
     .then(data =>{
       console.log(data);
       setId(data.user.id);
-      // setName(data.user.name);
-      // setEmail(data.user.email);
-      // setPassword(data.user.password);
     }
     );
 

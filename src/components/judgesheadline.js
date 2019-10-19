@@ -1,7 +1,7 @@
 import React from 'react';
 import Jump from 'react-reveal/Jump';
 
-class JumpExample extends React.Component {
+class JudgesHeadLine extends React.Component {
   render() {
     return (
       <div className="jump-judges">
@@ -13,4 +13,4 @@ class JumpExample extends React.Component {
   }
 }
 
-export default JumpExample;
+export default JudgesHeadLine;

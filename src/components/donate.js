@@ -19,7 +19,7 @@ export default function Donate() {
   // });
 
 
-  const [iname, setIName] = React.useState("Your contribution supports the future of NYC developers community. Hawkathon couldn't exist without your support. We attract bright software engineers from around the country, encouraging them to learn and build in a mentorship-focused environment. ");
+  const [iname, setIName] = React.useState("Your contribution supports the future of NYC developers community. Hawkathon couldn't exist without your support. We attract bright software engineers from around the country, encouraging them to learn and build in a mentorship-focused environment.");
   const [iprice, setIPrice] = React.useState(1);
   const [idescription, setIDescription] = React.useState("Thank you!");
 

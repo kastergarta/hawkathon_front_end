@@ -1,163 +1,153 @@
-import React, { Component } from 'react';
-import Checkbox from './checkbox.js';
+import React, { useState } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Paper from '@material-ui/core/Paper';
+import Stepper from '@material-ui/core/Stepper';
+import Step from '@material-ui/core/Step';
+import StepLabel from '@material-ui/core/StepLabel';
+import Button from '@material-ui/core/Button';
+import Link from '@material-ui/core/Link';
+import Typography from '@material-ui/core/Typography';
+import UpdateGeneralInfo from './updategeneralinfo.js';
+import UpdateTechSkills from './updatetechskills.js';
+import UpdateSoftSkills from './updatesoftskills.js';
+import YourProfile from './yourprofile.js';
 
-const OPTIONS = ["JS", "Python", "GraphQL", "Rust", "React", "Angular", "R", "Cooking", "Amrit"];
-
-class Profile extends Component {
-  state = {
-    name: '',
-    location: '',
-    skills: '',
-    id: '',
-
-    checkboxes: OPTIONS.reduce(
-      (options, option) => ({
-        ...options,
-        [option]: false
-      }),
-      {}
-    )
-  }
-
-  selectAllCheckboxes = isSelected => {
-    Object.keys(this.state.checkboxes).forEach(checkbox => {
-
-      this.setState(prevState => ({
-        checkboxes: {
-          ...prevState.checkboxes,
-          [checkbox]: isSelected
-        }
-      }));
-    });
-  };
-
-
-  selectAll = () => this.selectAllCheckboxes(true);
-
-  deselectAll = () => this.selectAllCheckboxes(false);
-
-  handleCheckboxChange = changeEvent => {
-    const { name } = changeEvent.target;
-
-    this.setState(prevState => ({
-      checkboxes: {
-        ...prevState.checkboxes,
-        [name]: !prevState.checkboxes[name]
-      }
-    }));
-  };
-// #################### SUBMIT FORM #############################################
-  handleFormSubmit = formSubmitEvent => {
-    // console.log(this.state.checkboxes)
-    formSubmitEvent.preventDefault();
-
-    let newSkillsString = Object.keys(this.state.checkboxes)
-      .filter(checkbox => this.state.checkboxes[checkbox])
-      .join(' ');
-
-    // console.log(typeof newSkillsString)
-
-    fetch(`http://localhost:3000/users/${this.state.id}`, {
-      method: 'PATCH',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${localStorage.jwt}`
-      },
-      body: JSON.stringify({skills: newSkillsString} )
-    })
-    .then(res => res.json())
-    .then(console.log)
-
-  };
-  // #################################################################
-  createCheckbox = option => (
-     <Checkbox
-       label={option}
-       isSelected={this.state.checkboxes[option]}
-       onCheckboxChange={this.handleCheckboxChange}
-       key={option}
-     />
-   );
-
-   createCheckboxes = () => OPTIONS.map(this.createCheckbox);
-
-  componentDidMount() {
-
-    console.log(localStorage.jwt)
-    if (localStorage.jwt === undefined) {
-      return;
-    }
-
-    fetch('http://localhost:3000/profile',{
-      headers: {
-        'Authorization': `Bearer ${localStorage.jwt}`
-      }
-    })
-    .then(res => res.json())
-    .then(data =>{
-      console.log(data);
-      this.setState({name: data.user.name, skills: data.user.skills, id: data.user.id})}
-    )
-
-  }
-
-
-  render() {
-
-    let skillsArray = this.state.skills.split(" ");
-    const skills = skillsArray.map(skill => {
-      return <p> {skill} </p>;
-    });
-
-    switch (this.state.name) {
-           case ("kis"):
-             return (
-            <div>
-               <div className="App">
-                 <h1>Welcome {this.state.name}!</h1>
-                 <p> Here are your skills:</p>
-                 {skills}
-                 <h2>Update your skills:</h2>
-               </div>
-               <div className="new-skills-form">
-               <form onSubmit={this.handleFormSubmit}>
-                   {this.createCheckboxes()}
-
-
-                   <button
-                     type="button"
-                     className="btn btn-outline-primary mr-2"
-                     onClick={this.selectAll}
-                   >
-                     Select All
-                   </button>
-
-                   <button
-                     type="button"
-                     className="btn btn-outline-primary mr-2"
-                     onClick={this.deselectAll}
-                   >
-                     Deselect All
-                   </button>
-
-                <button type="submit" className="btn btn-primary">
-                  Submit
-                </button>
-               </form>
-
-               </div>
-            </div>
-
-             );
-           default:
-    return (
-      <div>
-        !!!
-      </div>
-    );
-  }
-}
+function Copyright() {
+  return (
+    <Typography variant="body2" color="textSecondary" align="center">
+      {'Copyright © '}
+      <Link color="inherit" href="https://material-ui.com/">
+        Hawkathon
+      </Link>{' '}
+      {new Date().getFullYear()}
+      {'.'}
+    </Typography>
+  );
 }
 
-export default Profile;
+const useStyles = makeStyles(theme => ({
+  appBar: {
+    position: 'relative',
+  },
+  layout: {
+    width: 'auto',
+    marginLeft: theme.spacing(2),
+    marginRight: theme.spacing(2),
+    [theme.breakpoints.up(1000 + theme.spacing(2) * 2)]: {
+      width: 1000,
+      marginLeft: 'auto',
+      marginRight: 'auto',
+    },
+  },
+  paper: {
+    marginTop: theme.spacing(3),
+    marginBottom: theme.spacing(3),
+    padding: theme.spacing(2),
+    [theme.breakpoints.up(1000 + theme.spacing(3) * 2)]: {
+      marginTop: theme.spacing(6),
+      marginBottom: theme.spacing(6),
+      padding: theme.spacing(3),
+    },
+  },
+  stepper: {
+    padding: theme.spacing(3, 0, 5),
+  },
+  buttons: {
+    display: 'flex',
+    justifyContent: 'flex-end',
+  },
+  button: {
+    marginTop: theme.spacing(3),
+    marginLeft: theme.spacing(1),
+  },
+}));
+
+const steps = ['Your Profile', 'Update General Info', 'Tech Skills', 'Soft Skills'];
+
+function getStepContent(step) {
+  switch (step) {
+    case 0:
+      return <YourProfile />
+    case 1:
+      return <UpdateGeneralInfo />;
+    case 2:
+      return <UpdateTechSkills />;
+    case 3:
+      return <UpdateSoftSkills />;
+    default:
+      throw new Error('Unknown step');
+  }
+}
+
+export default function Profile() {
+  const classes = useStyles();
+  const [activeStep, setActiveStep] = React.useState(0);
+
+  const handleNext = () => {
+    setActiveStep(activeStep + 1);
+  };
+
+  const handleBack = () => {
+    setActiveStep(activeStep - 1);
+  };
+
+  return (
+    <React.Fragment>
+      <CssBaseline />
+
+      <main className={classes.layout}>
+        <Paper className={classes.paper}>
+          <Typography component="h1" variant="h4" align="center">
+            Update Your Info
+          </Typography>
+          <Stepper activeStep={activeStep} className={classes.stepper}>
+            {steps.map(label => (
+              <Step key={label}>
+                <StepLabel>{label}</StepLabel>
+              </Step>
+            ))}
+          </Stepper>
+          <React.Fragment>
+            {activeStep === steps.length ? (
+              <div className="high-five">
+              <div>
+              <React.Fragment>
+                <Typography variant="h5" gutterBottom>
+                  Great! You are all set. Looking forward to see you on next Hawkathon.
+                </Typography>
+              </React.Fragment>
+              <div>
+                <img src="https://cdn.dribbble.com/users/187497/screenshots/1548634/mailchimp-high5.gif"/>
+              </div>
+              </div>
+              </div>
+            ) : (
+              <React.Fragment>
+                {getStepContent(activeStep)}
+                <div className={classes.buttons}>
+                  {activeStep !== 0 && (
+                    <Button onClick={handleBack} className={classes.button}>
+                      Back
+                    </Button>
+                  )}
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    onClick={handleNext}
+                    className={classes.button}
+                  >
+                    {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
+                  </Button>
+                </div>
+              </React.Fragment>
+            )}
+          </React.Fragment>
+        </Paper>
+        <Copyright />
+      </main>
+    </React.Fragment>
+  );
+}

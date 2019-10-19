@@ -1,5 +1,5 @@
 import React from 'react';
-import FadeExample from './fadesponsors.js'
+import SponsorsHeadLine from './sponsorsheadline.js'
 
 class Sponsors extends React.Component {
 
@@ -7,7 +7,7 @@ class Sponsors extends React.Component {
   return (
     <div>
       <div className="sponsors-headline">
-      <FadeExample />
+      <SponsorsHeadLine />
       </div>
       <div className="sponsors">
           <div><img className="sponsorsImage" id="flatiron" src="https://cdn.evbuc.com/images/48394057/258081453087/2/logo.png"/></div>

@@ -15,16 +15,10 @@ import Hidden from '@material-ui/core/Hidden'
 import Link from '@material-ui/core/Link'
 import { borders } from '@material-ui/system';
 
+import Profile from './profile.js';
 
-
-
-import LogIn from './login.js';
-import SignUp from './signup.js';
-import Checkout from './profile2template.js';
-
-import SignIn from './login2.js'
-// import CustomizedSnackbars from './login2.js'
-import Register from './register2.js'
+import LogIn from './login.js'
+import Register from './register.js'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -134,7 +128,7 @@ export default function ButtonAppBar(props) {
 
             <Fade in={openLogin}>
               <div className={classes.paper}>
-               <SignIn handleStateChange={props.handleStateChange}/>
+               <LogIn handleStateChange={props.handleStateChange}/>
               </div>
             </Fade>
           </Modal>
@@ -175,14 +169,14 @@ export default function ButtonAppBar(props) {
                   <Hidden mdUp>
                     <img
                       className={classes.mobileHeaderImage}
-                      src="https://images.vexels.com/media/users/3/159193/isolated/lists/24fff859c08bd86c845b01bba458481d-bird-eagle-wing-beak-silhouette.png"
+                      src="https://backgroundcheckall.com/wp-content/uploads/2017/12/logo-background-png-10.png"
                       height="50" width="50"
                     />
                   </Hidden>
                   <Hidden smDown>
                     <img
                       className={classes.headerImage}
-                      src="https://images.vexels.com/media/users/3/159193/isolated/lists/24fff859c08bd86c845b01bba458481d-bird-eagle-wing-beak-silhouette.png"
+                      src="https://backgroundcheckall.com/wp-content/uploads/2017/12/logo-background-png-10.png"
                         height="50" width="50"
                     />
                   </Hidden>
@@ -209,7 +203,7 @@ export default function ButtonAppBar(props) {
 
             <Fade in={openProfile}>
               <div className={classes.paper}>
-               <Checkout />
+               <Profile />
               </div>
             </Fade>
           </Modal>

@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function PaymentForm() {
+export default function UpdateTechSkills() {
 
 const classes = useStyles();
 const [skills, setSkills] = React.useState('');
@@ -49,7 +49,7 @@ const fetchProfile = () => {
     return;
   }
 
-  fetch('http://localhost:3001/profile',{
+  fetch('http://localhost:3003/profile',{
     headers: {
       'Authorization': `Bearer ${localStorage.jwt}`
     }
@@ -70,7 +70,7 @@ const handleFormSubmit = (e) => {
 
   e.preventDefault();
 
-  fetch(`http://localhost:3001/users/${id}`, {
+  fetch(`http://localhost:3003/users/${id}`, {
     method: 'PATCH',
     headers: {
       'Accept': 'application/json',

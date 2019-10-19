@@ -1,16 +1,16 @@
 import React from 'react';
 import './App.css';
 
-import ButtonAppBar from './components/navbar.js';
+import NavBar from './components/navbar.js';
 import NavTabs from './components/tabs.js';
 import Sponsors from './components/sponsors.js';
 import JudgesCard from './components/judgescard.js';
-import SimpleExpansionPanel from './components/expansionpanels.js';
+import FAQ from './components/faq.js';
 import Parallax from './components/parallax.js';
 import Footer from './components/footer.js';
 import Donate from './components/donate.js';
-import JumpExample from './components/fadejudges.js';
-import JumpFAQ from './components/fadefaq.js';
+import JudgesHeadLine from './components/judgesheadline.js';
+import FAQHeadLine from './components/faqheadline.js';
 
 // import SimpleSnackbar from './components/simplesnackbar.js'
 
@@ -54,15 +54,15 @@ handleLogOutChange = () => {
 
     return (
       <div>
-          <ButtonAppBar position="sticky" userStatus={this.state.userStatus} handleStateChange={this.handleStateChange} handleLogOutChange={this.handleLogOutChange} handleStillLogedIn={this.handleStillLogedIn}/>
+          <NavBar position="sticky" userStatus={this.state.userStatus} handleStateChange={this.handleStateChange} handleLogOutChange={this.handleLogOutChange} handleStillLogedIn={this.handleStillLogedIn}/>
           <Parallax />
           <NavTabs />
           <Donate />
           <Sponsors />
-          <JumpExample />
+          <JudgesHeadLine />
           <JudgesCard />
-          <JumpFAQ />
-          <SimpleExpansionPanel />
+          <FAQHeadLine />
+          <FAQ />
           <Footer />
       </div>
     );

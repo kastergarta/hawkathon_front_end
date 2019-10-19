@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Slider from '@material-ui/core/Slider';
@@ -52,8 +52,33 @@ function valueLabelFormat(value) {
   return marks.findIndex(mark => mark.value === value) + 1;
 }
 
-export default function Review() {
+export default function UpdateSoftSkills() {
   const classes = useStyles();
+  const [id, setId] = React.useState('');
+
+
+  const fetchProfile = () => {
+
+    console.log(localStorage.jwt)
+    if (localStorage.jwt === undefined) {
+      return;
+    }
+
+    fetch('http://localhost:3003/profile',{
+      headers: {
+        'Authorization': `Bearer ${localStorage.jwt}`
+      }
+    })
+    .then(res => res.json())
+    .then(data =>{
+      console.log(data);
+      setId(data.user.id);
+    }
+    );
+
+  };
+
+  useEffect(fetchProfile, []);
 
   const [teamPlayer, setTeamPlayer] = React.useState(0);
   const [communication, setCommunication] = React.useState(0);
@@ -67,7 +92,7 @@ export default function Review() {
 
     e.preventDefault();
 
-    fetch(`http://localhost:3001/users/1`, {
+    fetch(`http://localhost:3003/users/${id}`, {
       method: 'PATCH',
       headers: {
         'Accept': 'application/json',
