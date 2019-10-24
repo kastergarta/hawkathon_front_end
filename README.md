@@ -9,7 +9,7 @@ This is a singel page website that have all the functionality to advertise and r
 3. [EmailJS](https://www.emailjs.com/) for sending greeting mail to every new user.
 4. With [Stripe](https://stripe.com/) visitors of the page can donate.
 
-![Hawkathon Demo](Oct_24_2019_15_58_36.gif)
+![Hawkathon Demo](Oct_24_2019_16_07_05.gif)
 
 ### ` What you can do on the Hawkathon page?`
 
