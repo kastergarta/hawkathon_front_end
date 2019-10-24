@@ -1,6 +1,6 @@
 ## HAWKATHON
 
-This is a singel page website that have all to functionality to advertise and run hackathon. 
+This is a singel page website that have all the functionality to advertise and run hackathon. 
 
 ### `Tech stack`
 
