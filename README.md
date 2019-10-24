@@ -1,6 +1,10 @@
 ## HAWKATHON
 
-This is a singel page website that have all functionality to advertise and run hackathon.
+This is a singel page website that have all to functionality to advertise and run hackathon. 
+
+1. Front-end is build with React. First back-end is build with Rails (auth, users, content), second back-end is build with Express (payments).
+2. React components styled with a [Material-UI] (https://material-ui.com)
+3. What you can do on the Hawkathon page? Register as a new user. Existing users log-in with a username and password. Every user can see and update his/her profile (name, email, location, password, tech skills, soft skills). Every visitor of the page can donate to the Hawkathon.
 
 ### `npm start`
 
