@@ -44,5 +44,5 @@ This is a single page website that have all the functionality to advertise and r
 
 ### `Thanks`
 
-Thank you [Annie Souza](https://github.com/luanesouza), [Randy Herasme](https://github.com/randyher) and Kevin McAlear for support, professionalism and patience. Thank you for seeing me and every student as a partner in learning and sharing. 
+Thank you [Annie Souza](https://github.com/luanesouza), [Randy Herasme](https://github.com/randyher) and [Kevin McAlear](https://github.com/kevinmcalear) for support, professionalism and patience. Thank you for seeing me and every student as a partner in learning and sharing. 
 
