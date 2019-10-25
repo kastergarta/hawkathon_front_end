@@ -16,6 +16,11 @@ This is a singel page website that have all the functionality to advertise and r
 1. Register as a new user. 
 2. Existing users log-in with a username and password. 
 3. Every user can see and update his/her profile (name, email, location, password, tech skills, soft skills). 
+
+![Hawkathon Donate 1](Hawkathon_Profile_1.png)
+![Hawkathon Donate 1](Hawkathon_Profile_2.png)
+![Hawkathon Donate 1](Hawkathon_Profile_3.png)
+
 4. Every visitor of the page can donate to the Hawkathon.
 
 ![Hawkathon Donate 1](Hawkathon_Donate_1.png)
