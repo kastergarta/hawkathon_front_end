@@ -14,6 +14,10 @@ This is a singel page website that have all the functionality to advertise and r
 ### ` What you can do on the Hawkathon page?`
 
 1. Register as a new user. 
+
+![Hawkathon Register](Hawkathon_Register.png)
+![Hawkathon Register](Hawkathon_Email.png)
+
 2. Existing users log-in with a username and password. 
 3. Every user can see and update his/her profile (name, email, location, password, tech skills, soft skills). 
 
