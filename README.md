@@ -1,6 +1,6 @@
 ## HAWKATHON
 
-This is a single page website that have all the functionality to advertise and run hackathon. 
+This is a single page website that have all the functionality to advertise and run hackathon. Hawkathon visitors can register, login, see and update profile, donate. Every new registered user will receive a greeting email. As an admin of this page you can send a notifications to users. Everything ready to host and run a real-life hackathon.    
 
 ### `Goals of this project`
 
@@ -44,5 +44,5 @@ This is a single page website that have all the functionality to advertise and r
 
 ### `Thanks`
 
-[Annie Souza](https://github.com/luanesouza), [Randy Herasme](https://github.com/randyher) and Kevin McAlear.
+Thank you [Annie Souza](https://github.com/luanesouza), [Randy Herasme](https://github.com/randyher) and Kevin McAlear for support, professionalism and patience. Thank you for seeing me and every student as a partner in learning and sharing. 
 
