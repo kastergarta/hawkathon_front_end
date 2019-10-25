@@ -18,6 +18,8 @@ This is a singel page website that have all the functionality to advertise and r
 3. Every user can see and update his/her profile (name, email, location, password, tech skills, soft skills). 
 4. Every visitor of the page can donate to the Hawkathon.
 
+![Hawkathon Donate 1](Hawkathon_Donate_1.png)
+
 ### `Goals of this project`
 
 1. Master React skills and be proficient with Material-UI.
