@@ -1,6 +1,6 @@
 ## HAWKATHON `Updated 12.06.2019` [VIDEO](https://youtu.be/9RpBgMKWtDw)
 
-This is a single page website that have all the functionality to advertise and run hackathon. Hawkathon visitors can register, login, see and update profile, donate. Every new registered user will receive a greeting email. As an admin of this page you can send a notifications to users. Everything ready to host and run a real-life hackathon.    
+This is a single page application (SPA) that have all the functionality to advertise and run hackathon. Hawkathon visitors can register, login, see and update profile, donate. Every new registered user will receive a greeting email. As an admin of this page, you can send notifications to users. Everything ready to host and run a real-life hackathon.    
 
 ### `Goals of this project`
 
@@ -11,14 +11,14 @@ This is a single page website that have all the functionality to advertise and r
 
 ### `Tech stack`
 
-1. Front-end is build with React. First back-end is build with Rails (auth, users, content), second back-end is build with Express (donate).
+1. Front-end is built with React. First back-end is built with Rails (auth, users, content), second back-end is built with Express (donate).
 2. React components styled with a [Material-UI](https://material-ui.com).
 3. [EmailJS](https://www.emailjs.com/) for sending greeting mail to every new user.
 4. With [Stripe](https://stripe.com/) visitors of the page can donate.
 
 ### `Run this App`
 
-1. To run the App you need to clone this repo, and another two back-end ([Rails](https://github.com/kastergarta/hawkathon_backend_postgres), [Express](https://github.com/kastergarta/Test_ExpressJS_backend)) repos.
+1. To run the App you need to clone this repo and another two back-ends ([Rails](https://github.com/kastergarta/hawkathon_backend_postgres), [Express](https://github.com/kastergarta/Test_ExpressJS_backend)) repos.
 2. Rails app should run on http://localhost:3003 (for custom port use this -> "bundle exec puma -C config/puma.rb -b tcp://127.0.0.1:3003")
 3. Rails part built on top of PostgreSQL.
 
@@ -44,5 +44,5 @@ This is a single page website that have all the functionality to advertise and r
 
 ### `Thanks`
 
-Thank you [Annie Souza](https://github.com/luanesouza), [Randy Herasme](https://github.com/randyher) and [Kevin McAlear](https://github.com/kevinmcalear) for support, professionalism and patience. Thank you for seeing me and every student as a partner in learning and sharing. 
+Thank you [Annie Souza](https://github.com/luanesouza), [Randy Herasme](https://github.com/randyher) and [Kevin McAlear](https://github.com/kevinmcalear) for support, professionalism, and patience. Thank you for seeing me and every student as a partner in learning and sharing. 
 
