@@ -1,4 +1,4 @@
-## HAWKATHON `Updated 12.13.2019` [VIDEO](https://youtu.be/9RpBgMKWtDw)
+## HAWKATHON `Updated 12.15.2019` [VIDEO](https://youtu.be/9RpBgMKWtDw)
 
 This is a single page application (SPA) that have all the functionality to advertise and run hackathon. Hawkathon visitors can register, login, see and update profile, donate. Every new registered user will receive a greeting email. As an admin of this page, you can send notifications to users. Everything ready to host and run a real-life hackathon.    
 
