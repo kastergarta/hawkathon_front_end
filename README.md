@@ -1,4 +1,4 @@
-## `Hi! This is an outdated and no longer updating repository. Feel free to check this new, fresh and modern version ->` [CLICK] (https://github.com/kastergarta/Hawkathon-SPA-Project)
+## `Hi! This is an outdated and no longer updating repository. Feel free to check this new, fresh and modern version ->` [CLICK](https://github.com/kastergarta/Hawkathon-SPA-Project)
 
 ## HAWKATHON `Updated 11.16.2019` [VIDEO](https://youtu.be/9RpBgMKWtDw)
 
