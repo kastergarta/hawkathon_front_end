@@ -13,7 +13,7 @@
     "react-compound-timer": "^1.1.9",
     "react-dom": "^16.9.0",
     "react-reveal": "^1.2.2",
-    "react-scripts": "3.1.1",
+    "react-scripts": "5.0.1",
     "react-slick": "^0.25.2",
     "react-stripe-checkout": "^2.6.3",
     "react-toastify": "^5.4.0",
